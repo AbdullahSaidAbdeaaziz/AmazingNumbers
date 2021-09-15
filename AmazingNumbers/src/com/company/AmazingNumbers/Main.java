@@ -351,7 +351,7 @@ public class Main {
 
         boolean ch = false;
         while (t > 0) {
-            boolean[] kinds = {isBuzz(n), isDuck(n), isPalindromic(n), isGapful(n), isSpy(n), isSquare(n), isSunny(n), isEven(n), isOdd(n), isJumping(n)};
+            boolean[] kinds = {isBuzz(n), isDuck(n), isPalindromic(n), isGapful(n), isSpy(n), isSquare(n), isSunny(n), isEven(n), isOdd(n), isJumping(n), isHappy(n), isSad(n)};
             for (int j : index) {
                 if (kinds[j]) {
                     ch = true;
@@ -422,6 +422,12 @@ public class Main {
             if (isJumping(temp)) {
                 myString.add(" jumping");
             }
+            if (isHappy(temp)) {
+                myString.add(" happy");
+            }
+            if (isSad(temp)) {
+                myString.add(" sad");
+            }
             if (isEven(temp)) {
                 myString.add(" even");
             }
@@ -446,6 +452,8 @@ public class Main {
                                    + String.format("%12s: %b\n", "square", isSquare(num))
                                    + String.format("%12s: %b\n", "sunny", isSunny(num))
                                    + String.format("%12s: %b\n", "jumping", isJumping(num))
+                                   + String.format("%12s: %b\n", "happy", isHappy(num))
+                                   + String.format("%12s: %b\n", "sad", isSad(num))
                                    + String.format("%12s: %b\n", "even", isEven(num))
                                    + String.format("%12s: %b", "odd", isOdd(num))
         );
